@@ -8,6 +8,7 @@ public class Card {
         this.rank = rank;
         this.suit = suit;
     }//sasdasd
+    ////fdgfgdfg
 
     public Rank getRank() {
         return rank;
