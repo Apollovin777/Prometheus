@@ -7,8 +7,7 @@ public class Card {
     public Card(Rank rank, Suit suit) {
         this.rank = rank;
         this.suit = suit;
-    }//sasdasd
-    ////fdgfgdfg
+    }
 
     public Rank getRank() {
         return rank;
