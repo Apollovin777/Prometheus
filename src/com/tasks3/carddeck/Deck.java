@@ -11,31 +11,19 @@ public class Deck {
         index = 0;
         for (Card c: deck.deck
                 ) {
-            System.out.println(index + " " + c.getSuit().getName() + " " + c.getRank().getName());
+            System.out.println(index + " " + c.getSuit().name() + " " + c.getRank().name());
             index++;
         }
-        deck.shuffle();
 
-        while (deck.hasNext())
-            deck.drawOne();
-
-        deck.order();
-
-        index = 0;
-        for (Card c: deck.deck
-             ) {
-            System.out.println(index + " " + c.getSuit().getName() + " " + c.getRank().getName());
-            index++;
-        }
     }
 
     private Card[] deck = new Card[36];
 
     public Deck(){
         int index = 0;
-        for (Suit s: Suit.values
+        for (Suit s: Suit.values()
              ) {
-            for (Rank r: Rank.values
+            for (Rank r: Rank.values()
                  ) {
                 deck[index] = new Card(r,s);
                 index++;
@@ -74,9 +62,9 @@ public class Deck {
     public void order() {
         Card[] temp = new Card[deck.length];
         int index = 0;
-        for (Suit s: Suit.values
+        for (Suit s: Suit.values()
                 ) {
-            for (Rank r: Rank.values
+            for (Rank r: Rank.values()
                     ) {
                 for(int i = 0; i < deck.length; i++){
                     if(deck[i].getSuit().equals(s) && deck[i].getRank().equals(r)){
