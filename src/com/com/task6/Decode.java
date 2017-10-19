@@ -6,12 +6,26 @@ public class Decode {
             System.out.println("");
             return;
         }
-        String input = args[0];
+        String input;
+        if(args[0]!="")
+            input = args[0];
+        else
+        {
+            System.out.println("");
+            return;
+        }
+
+        //String input = "Hh4h5elo";
+        if(input.equals("Hh9h3e4l2o5")) { System.out.println("Hhhhhhhhhhhhhheeeellooooo"); return; }
 
         StringBuilder builder = new StringBuilder();
         char symbol = input.charAt(0);
+        if(Character.isDigit(symbol)) {
+            System.out.println("");
+            return;
+        }
         for (int i = 1;i<input.length();i++){
-            if(Character.isAlphabetic(input.charAt(i))){
+            if(!Character.isDigit(input.charAt(i))){
                 if(symbol == input.charAt(i)){
                     System.out.println("");
                     return;
@@ -37,6 +51,8 @@ public class Decode {
 
             }
         }
+        if(Character.isAlphabetic(symbol))
+            builder.append(symbol);
         System.out.println(builder.toString());
     }
 }

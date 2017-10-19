@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Congress implements Subject {
+    public static void main(String[] args){
+
+
+
+
+    }
     List<Observer> list = new ArrayList<>();
     private String expansion;
     private String laundering;
